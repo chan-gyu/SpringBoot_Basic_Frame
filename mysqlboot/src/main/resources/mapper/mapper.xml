@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mysqlboot.CarMapper">
+
+    <select id="carList" resultMap="CarMap">
+        select * from car
+	</select>
+	
+	<resultMap type="com.example.mysqlboot.vo.Car" id="CarMap">
+		<result column="CAR_NUM" property="carNum"/>
+		<result column="IN_DATE" property="inDate"/>
+		<result column="STATE" property="state"/>
+		<result column="NAME" property="name"/>
+	</resultMap>
+</mapper>
